@@ -52,5 +52,22 @@ sub get {
     return $res;
 }
 
+sub _all_request {
+    my $self = shift;
+
+    my $url = URI->new_abs(
+        '/' . $self->client->version . '/' . $self->name,
+        $self->client->endpoint);
+
+    return GET $url->as_string;
+}
+
+sub all {
+    my $self = shift;
+    my $req = $self->_all_request(@_);
+    my $res = $self->client->perform($req);
+    return $res;
+}
+
 1;
 

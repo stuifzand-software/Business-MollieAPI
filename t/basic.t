@@ -14,7 +14,7 @@ dies_ok {
 
 $api->api_key('test_tTgRGYyCPBPfWv9H9NBBGmARq68AX3');
 
-my $req = $api->payments->create_request(
+my $req = $api->payments->_create_request(
     amount      => '12.34',
     redirectUrl => "http://example.com/test.php",
     description => "Order #123123",
@@ -36,12 +36,9 @@ my $res = $api->payments->create(
     method      => 'ideal',
 );
 
-print STDERR Dumper($res);
-
 my $id = $res->{id};
-
 my $res2 = $api->payments->get($id);
-print STDERR Dumper($res2);
+is($res2->{amount}, '12.34');
 
 done_testing;
 
