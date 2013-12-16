@@ -1,4 +1,4 @@
-package Business::iDEAL::MollieAPI::Resource;
+package Business::MollieAPI::Resource;
 use Moo::Role;
 use HTTP::Request;
 use HTTP::Request::Common;

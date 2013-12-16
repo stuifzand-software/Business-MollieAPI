@@ -1,4 +1,4 @@
-package Business::iDEAL::MollieAPI;
+package Business::MollieAPI;
 
 use strict;
 use 5.008_005;
@@ -10,9 +10,9 @@ use URI;
 use LWP::UserAgent;
 use JSON::XS;
 
-use Business::iDEAL::MollieAPI::Payments;
-use Business::iDEAL::MollieAPI::Methods;
-use Business::iDEAL::MollieAPI::Issuers;
+use Business::MollieAPI::Payments;
+use Business::MollieAPI::Methods;
+use Business::MollieAPI::Issuers;
 
 has endpoint => (
     is      => 'rw',
@@ -41,7 +41,7 @@ has payments => (
 
 sub _build_payments {
     my $self = shift;
-    return Business::iDEAL::MollieAPI::Payments->new(client => $self);
+    return Business::MollieAPI::Payments->new(client => $self);
 }
 
 has methods => (
@@ -50,7 +50,7 @@ has methods => (
 
 sub _build_methods {
     my $self = shift;
-    return Business::iDEAL::MollieAPI::Methods->new(client => $self);
+    return Business::MollieAPI::Methods->new(client => $self);
 }
 
 has issuers => (
@@ -59,7 +59,7 @@ has issuers => (
 
 sub _build_issuers {
     my $self = shift;
-    return Business::iDEAL::MollieAPI::Issuers->new(client => $self);
+    return Business::MollieAPI::Issuers->new(client => $self);
 }
 
 has api_key => (
@@ -86,13 +86,13 @@ __END__
 
 =head1 NAME
 
-Business::iDEAL::MollieAPI - Implementation of new Mollie API
+Business::MollieAPI - Implementation of new Mollie API
 
 =head1 SYNOPSIS
 
-  use Business::iDEAL::MollieAPI;
+  use Business::MollieAPI;
 
-  my $api = Business::iDEAL::MollieAPI->new(api_key => 'live_.....');
+  my $api = Business::MollieAPI->new(api_key => 'live_.....');
 
   my $methods = $api->methods->all;
 
@@ -111,7 +111,7 @@ Business::iDEAL::MollieAPI - Implementation of new Mollie API
 
 =head1 DESCRIPTION
 
-Business::iDEAL::MollieAPI is the implementation of the new Mollie API.
+Business::MollieAPI is the implementation of the new Mollie API.
 
 It supports multiple payment methods: iDEAL, MisterCash and creditcard.
 
