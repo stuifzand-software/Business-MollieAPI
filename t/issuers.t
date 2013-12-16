@@ -2,11 +2,11 @@ use strict;
 use Test::More;
 use Test::Exception;
 
-use Business::iDEAL::MollieAPI;
+use Business::MollieAPI;
 use Data::Dumper;
 use JSON::XS;
 
-my $api = Business::iDEAL::MollieAPI->new(
+my $api = Business::MollieAPI->new(
     api_key => 'test_tTgRGYyCPBPfWv9H9NBBGmARq68AX3',
 );
 

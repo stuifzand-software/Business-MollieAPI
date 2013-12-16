@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Business-iDEAL-MollieAPI",
+   "name" : "Business-MollieAPI",
    "no_index" : {
       "directory" : [
          "t",

@@ -1,12 +1,12 @@
 # NAME
 
-Business::iDEAL::MollieAPI - Implementation of new Mollie API
+Business::MollieAPI - Implementation of new Mollie API
 
 # SYNOPSIS
 
-    use Business::iDEAL::MollieAPI;
+    use Business::MollieAPI;
 
-    my $api = Business::iDEAL::MollieAPI->new(api_key => 'live_.....');
+    my $api = Business::MollieAPI->new(api_key => 'live_.....');
 
     my $methods = $api->methods->all;
 
@@ -25,7 +25,7 @@ Business::iDEAL::MollieAPI - Implementation of new Mollie API
 
 # DESCRIPTION
 
-Business::iDEAL::MollieAPI is the implementation of the new Mollie API.
+Business::MollieAPI is the implementation of the new Mollie API.
 
 It supports multiple payment methods: iDEAL, MisterCash and creditcard.
 
