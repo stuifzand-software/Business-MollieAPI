@@ -1,6 +1,7 @@
-Revision history for Business-iDEAL-MollieAPI
+Revision history for Business-MollieAPI
 
 {{$NEXT}}
+		- Fix naming, remove iDEAL from package name
 
 0.01  2013-12-16 11:33:13 CET
         - Initial release
