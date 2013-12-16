@@ -47,6 +47,17 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/stuifzand-software/Business-MollieAPI/issues"
+      },
+      "homepage" : "https://github.com/stuifzand-software/Business-MollieAPI",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/stuifzand-software/Business-MollieAPI.git",
+         "web" : "https://github.com/stuifzand-software/Business-MollieAPI"
+      }
+   },
+   "version" : "0.02"
 }
 
