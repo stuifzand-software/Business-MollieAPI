@@ -1,6 +1,7 @@
 Revision history for Business-MollieAPI
 
 {{$NEXT}}
+        - Add missing Test::Exception
 
 0.02  2013-12-16 11:40:11 CET
 		- Fix naming, remove iDEAL from package name
