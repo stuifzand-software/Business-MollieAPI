@@ -1,6 +1,7 @@
 Revision history for Business-MollieAPI
 
 {{$NEXT}}
+	    - Fix dependencies
 
 0.03  2013-12-17 14:41:15 CET
         - Add missing Test::Exception
