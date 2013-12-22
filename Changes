@@ -1,6 +1,8 @@
 Revision history for Business-MollieAPI
 
 {{$NEXT}}
+
+0.04  2013-12-22 09:27:30 CET
 	    - Fix dependencies
 
 0.03  2013-12-17 14:41:15 CET
