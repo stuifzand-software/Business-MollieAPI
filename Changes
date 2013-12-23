@@ -1,6 +1,8 @@
 Revision history for Business-MollieAPI
 
 {{$NEXT}}
+
+0.05  2013-12-23 13:10:07 CET
 		- Add missing URI dependency
 
 0.04  2013-12-22 09:27:30 CET
