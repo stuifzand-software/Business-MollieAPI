@@ -1,6 +1,7 @@
 Revision history for Business-MollieAPI
 
 {{$NEXT}}
+		- While testing use your own test_key TEST_MOLLIE_TESTMODE_KEY
 
 0.06  2013-12-28 19:30:22 CET
 		- Add missing LWP::Protocol::https dependency
