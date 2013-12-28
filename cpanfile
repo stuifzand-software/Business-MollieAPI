@@ -2,6 +2,7 @@ requires 'perl', '5.008005';
 
 requires 'Moo';
 requires 'LWP::UserAgent';
+requires 'LWP::Protocol::https';
 requires 'URI';
 requires 'JSON::XS';
 
