@@ -1,6 +1,7 @@
 Revision history for Business-MollieAPI
 
 {{$NEXT}}
+		- Add missing LWP::Protocol::https dependency
 
 0.05  2013-12-23 13:10:07 CET
 		- Add missing URI dependency
