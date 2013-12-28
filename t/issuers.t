@@ -6,22 +6,24 @@ use Business::MollieAPI;
 use Data::Dumper;
 use JSON::XS;
 
-my $api = Business::MollieAPI->new(
-    api_key => 'test_tTgRGYyCPBPfWv9H9NBBGmARq68AX3',
-);
+SKIP: {
+    skip 'Specify TEST_MOLLIE_TESTMODE_KEY to run tests', 5 unless $ENV{TEST_MOLLIE_TESTMODE_KEY};
 
-my $issuers = $api->issuers->all;
+    my $api = Business::MollieAPI->new(
+        api_key => $ENV{TEST_MOLLIE_TESTMODE_KEY},
+    );
 
-ok($issuers);
+    my $issuers = $api->issuers->all;
 
-ok(ref($issuers), 'HASH');
-ok(exists $issuers->{count});
-ok(exists $issuers->{totalCount});
-ok(exists $issuers->{offset});
-ok(exists $issuers->{data});
-ok(ref($issuers->{data}) eq 'ARRAY');
+    ok($issuers);
 
-#print STDERR Dumper($issuers);
+    ok(ref($issuers), 'HASH');
+    ok(exists $issuers->{count});
+    ok(exists $issuers->{totalCount});
+    ok(exists $issuers->{offset});
+    ok(exists $issuers->{data});
+    ok(ref($issuers->{data}) eq 'ARRAY');
+}
 
 done_testing();
 
