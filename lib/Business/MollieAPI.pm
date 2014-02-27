@@ -2,7 +2,7 @@ package Business::MollieAPI;
 
 use strict;
 use 5.008_005;
-our $VERSION = '0.07';
+our $VERSION = '0.09';
 
 use Moo;
 use URI;
