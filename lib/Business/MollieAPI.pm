@@ -98,11 +98,11 @@ Business::MollieAPI - Implementation of new Mollie API
 
   my $issuers = $api->issuers->all;
 
-  my $payment = $api->payments->create({
+  my $payment = $api->payments->create(
     amount      => '12.34',
     redirectUrl => 'http://example.com/test.php',
     description => 'Order #123',
-  });
+  );
 
   # Save $payment->{id} for later
 
