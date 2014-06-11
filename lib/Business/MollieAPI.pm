@@ -70,13 +70,19 @@ has api_key => (
     },
 );
 
+sub log_response {
+    return;
+}
+
 sub perform {
     my $self = shift;
     my $req = shift;
     $req->header('Authorization', 'Bearer ' . $self->api_key);
     my $ua = LWP::UserAgent->new();
     my $res = $ua->request($req);
-    return decode_json($res->decoded_content);
+    my $data = decode_json($res->decoded_content);
+    $self->log_response({ request => $req, response => $res });
+    return $data;
 }
 
 1;
