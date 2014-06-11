@@ -1,6 +1,7 @@
 Revision history for Business-MollieAPI
 
 {{$NEXT}}
+		- Add logging for requests.
 
 0.09  2014-02-27 15:52:08 CET
 		- Fix docs for payments->create()
